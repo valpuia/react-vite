@@ -1,4 +1,5 @@
 import ClipLoader from "react-spinners/ClipLoader";
+import PropTypes from "prop-types";
 
 export default function Loader({ loading = false }) {
   const override = {
@@ -17,3 +18,7 @@ export default function Loader({ loading = false }) {
     />
   );
 }
+
+Loader.propTypes = {
+  loading: PropTypes.bool,
+};

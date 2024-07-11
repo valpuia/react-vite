@@ -2,6 +2,7 @@ import { ClockIcon, UserIcon } from "@heroicons/react/24/outline";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function JobCard({ post }) {
   dayjs.extend(relativeTime);
@@ -40,3 +41,13 @@ export default function JobCard({ post }) {
     </div>
   );
 }
+
+JobCard.propTypes = {
+  post: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    detail: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    published_at: PropTypes.string.isRequired,
+  }).isRequired,
+};

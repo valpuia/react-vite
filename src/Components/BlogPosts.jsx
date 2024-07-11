@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loader from "./Loader";
@@ -56,3 +57,7 @@ export default function BlogPost({ isHome = false }) {
     </section>
   );
 }
+
+BlogPost.propTypes = {
+  isHome: PropTypes.bool,
+};

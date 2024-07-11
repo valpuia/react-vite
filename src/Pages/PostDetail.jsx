@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import {
   ArrowLeftIcon,
@@ -75,6 +76,10 @@ const PostDetail = ({ deletePost }) => {
       </section>
     </>
   );
+};
+
+PostDetail.propTypes = {
+  deletePost: PropTypes.func.isRequired,
 };
 
 export { PostDetail as default, JobLoader };
